@@ -1,4 +1,4 @@
-import { ClassProduct, BTWProduct } from "@/types";
+import type { ClassProduct, BTWProduct } from "@/types";
 
 export const CLASS_PRODUCTS: ClassProduct[] = [
   {
@@ -11,7 +11,7 @@ export const CLASS_PRODUCTS: ClassProduct[] = [
     duration: "8 hours (typically 2 sessions)",
     formats: ["virtual", "in-person"],
     whoItsFor: "Teens getting their first license",
-    stripeProductId: "prod_XXXXX", // replace with real Stripe product ID
+    stripeProductId: "prod_USjQAk0h4IvI12",
   },
   {
     id: "4hr",
@@ -23,7 +23,7 @@ export const CLASS_PRODUCTS: ClassProduct[] = [
     duration: "4 hours (single session)",
     formats: ["virtual", "in-person"],
     whoItsFor: "Adults needing a refresher or court/insurance requirement",
-    stripeProductId: "prod_YYYYY",
+    stripeProductId: "prod_USjPAUtPGYG03p",
   },
 ];
 
@@ -37,7 +37,7 @@ export const BTW_PRODUCTS: BTWProduct[] = [
       "Single focused session — perfect for nervous beginners or targeted skill work.",
     sessions: 1,
     savings: null,
-    stripeProductId: "prod_AAAAA",
+    stripeProductId: "prod_USjPZhSn7fhSz4",
   },
   {
     id: "btw-5",
@@ -48,7 +48,7 @@ export const BTW_PRODUCTS: BTWProduct[] = [
       "Build real confidence. Covers parking, freeway, residential, and intersections across multiple sessions.",
     sessions: "2–3",
     savings: "$15",
-    stripeProductId: "prod_BBBBB",
+    stripeProductId: "prod_USjOO4G3wgKA7h",
   },
   {
     id: "btw-10",
@@ -59,6 +59,6 @@ export const BTW_PRODUCTS: BTWProduct[] = [
       "Complete driving preparation. From first lesson to test-ready, with a structured progression plan.",
     sessions: "4–5",
     savings: "$55",
-    stripeProductId: "prod_CCCCC",
+    stripeProductId: "prod_USjNZAQHFpO7di",
   },
 ];

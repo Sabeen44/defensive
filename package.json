@@ -12,6 +12,7 @@
     "@marsidev/react-turnstile": "^1.5.2",
     "@sanity/client": "^7.22.0",
     "@sanity/image-url": "^2.1.1",
+    "@sanity/vision": "^5.24.0",
     "@stripe/react-stripe-js": "^6.3.0",
     "@stripe/stripe-js": "^9.4.0",
     "clsx": "^2.1.1",
@@ -19,10 +20,12 @@
     "framer-motion": "^12.38.0",
     "lucide-react": "^1.14.0",
     "next": "16.2.4",
-    "next-sanity": "^12.4.0",
+    "next-sanity": "^12.4.2",
     "react": "19.2.4",
     "react-dom": "19.2.4",
-    "stripe": "^22.1.0"
+    "sanity": "^5.24.0",
+    "stripe": "^22.1.0",
+    "styled-components": "^6.4.1"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",

@@ -12,7 +12,10 @@ interface Props {
 
 export default function StepCheckout({ product, dateSlot, location }: Props) {
   const [formData, setFormData] = useState({ name: "", email: "" });
-  const [turnstileToken, setTurnstileToken] = useState<string | null>(null);
+  const hasTurnstile = !!process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY;
+  const [turnstileToken, setTurnstileToken] = useState<string | null>(
+    hasTurnstile ? null : "dev-bypass"
+  );
   const [processing, setProcessing] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
@@ -28,8 +31,7 @@ export default function StepCheckout({ product, dateSlot, location }: Props) {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          productName: product.name,
-          price: product.price,
+          stripeProductId: product.stripeProductId,
           studentName: formData.name,
           email: formData.email,
           dateSlot,
@@ -106,11 +108,13 @@ export default function StepCheckout({ product, dateSlot, location }: Props) {
         </div>
       </div>
 
-      <Turnstile
-        siteKey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY!}
-        onSuccess={(token) => setTurnstileToken(token)}
-        options={{ theme: "light", size: "invisible" }}
-      />
+      {hasTurnstile && (
+        <Turnstile
+          siteKey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY!}
+          onSuccess={(token) => setTurnstileToken(token)}
+          options={{ theme: "light", size: "invisible" }}
+        />
+      )}
 
       {error && <p className="text-sm text-red-500 mb-3">{error}</p>}
 

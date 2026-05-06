@@ -1,13 +1,13 @@
 import { Header } from '@/components/layout/Header'
 import { Footer } from '@/components/layout/Footer'
-import SelectionFlow from '@/components/flow/SelectionFlow'
+import SelectionFlowClient from '@/components/flow/SelectionFlowClient'
 
 export default function Home() {
   return (
     <>
       <Header />
       <main className="min-h-screen bg-white">
-        <SelectionFlow />
+        <SelectionFlowClient />
       </main>
       <Footer />
     </>
