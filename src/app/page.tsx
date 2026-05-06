@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <>
       <Header />
-      <main className="min-h-screen bg-white">
+      <main className="flex min-h-screen items-center justify-center bg-white">
         <SelectionFlowClient />
       </main>
       <Footer />
